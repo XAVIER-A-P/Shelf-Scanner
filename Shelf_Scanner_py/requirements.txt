@@ -1,0 +1,12 @@
+fastapi[all]
+uvicorn[standard]
+sqlmodel
+psycopg2-binary
+openai
+google-cloud-vision
+boto3
+python-multipart
+redis
+fastapi-limiter
+pydantic-settings
+
