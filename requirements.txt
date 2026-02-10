@@ -6,7 +6,7 @@ openai
 google-cloud-vision
 boto3
 python-multipart
-redis
-fastapi-limiter
+redis>=4.2.0
+fastapi-limiter==0.1.5
 pydantic-settings
 
