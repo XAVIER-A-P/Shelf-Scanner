@@ -9,4 +9,4 @@ python-multipart
 redis>=4.2.0
 fastapi-limiter==0.1.5
 pydantic-settings
-
+jinja2

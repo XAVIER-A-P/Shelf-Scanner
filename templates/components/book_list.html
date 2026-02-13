@@ -1,0 +1,31 @@
+<div class="space-y-4 animate-fade-in-up">
+    <h3 class="font-bold text-lg text-slate-700 border-b pb-2">Found {{ books|length }} Books</h3>
+    
+    <div class="grid gap-4">
+        {% for book in books %}
+        <div class="bg-white p-4 rounded-lg shadow border border-slate-100 flex gap-4 items-start">
+            <div class="flex-1">
+                <h4 class="font-bold text-slate-900">{{ book.title }}</h4>
+                <p class="text-sm text-slate-500">{{ book.author }}</p>
+                
+                {% if book.recommendation_score > 80 %}
+                <span class="inline-block mt-2 px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded">
+                    ★ Top Pick
+                </span>
+                {% endif %}
+            </div>
+            
+            <a href="https://www.amazon.com/s?k={{ book.title }}+{{ book.author }}" target="_blank" 
+               class="px-3 py-2 bg-slate-100 text-slate-600 rounded hover:bg-indigo-600 hover:text-white transition-colors text-sm font-medium">
+               Buy
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="text-center pt-8">
+        <button onclick="window.location.reload()" class="text-indigo-600 font-semibold hover:underline">
+            Scan Another Shelf
+        </button>
+    </div>
+</div>

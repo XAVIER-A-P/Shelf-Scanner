@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelf Scanner 📚</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <style>
+        /* Custom Pulse Animation for AI Loading */
+        @keyframes scan {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+        .scanner-line {
+            animation: scan 2s infinite linear;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen font-sans">
+    <div class="max-w-md mx-auto bg-white min-h-screen shadow-xl overflow-hidden">
+        <header class="bg-indigo-600 p-4 shadow-md">
+            <h1 class="text-white text-xl font-bold flex items-center gap-2">
+                <span>📚</span> Shelf Scanner
+            </h1>
+        </header>
+
+        <main id="main-content" class="p-4">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+</body>
+</html>
