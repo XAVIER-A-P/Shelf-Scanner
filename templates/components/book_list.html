@@ -1,30 +1,37 @@
 <div class="space-y-4 animate-fade-in-up">
-    <h3 class="font-bold text-lg text-slate-700 border-b pb-2">Found {{ books|length }} Books</h3>
+    <h3 class="font-bold text-lg text-slate-700 border-b pb-2">Top Picks For You</h3>
     
     <div class="grid gap-4">
         {% for book in books %}
-        <div class="bg-white p-4 rounded-lg shadow border border-slate-100 flex gap-4 items-start">
-            <div class="flex-1">
-                <h4 class="font-bold text-slate-900">{{ book.title }}</h4>
+        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col gap-3 relative overflow-hidden">
+            
+            {% if book.score %}
+            <div class="absolute top-0 right-0 bg-indigo-600 text-white font-black text-sm px-3 py-1 rounded-bl-lg">
+                {{ book.score }}/100
+            </div>
+            {% endif %}
+
+            <div>
+                <h4 class="font-bold text-slate-900 pr-12">{{ book.title }}</h4>
                 <p class="text-sm text-slate-500">{{ book.author }}</p>
-                
-                {% if book.recommendation_score > 80 %}
-                <span class="inline-block mt-2 px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded">
-                    ★ Top Pick
-                </span>
-                {% endif %}
             </div>
             
+            {% if book.reason %}
+            <div class="bg-indigo-50 p-3 rounded-lg border border-indigo-100">
+                <p class="text-sm text-indigo-900 italic">"{{ book.reason }}"</p>
+            </div>
+            {% endif %}
+            
             <a href="https://www.amazon.com/s?k={{ book.title }}+{{ book.author }}" target="_blank" 
-               class="px-3 py-2 bg-slate-100 text-slate-600 rounded hover:bg-indigo-600 hover:text-white transition-colors text-sm font-medium">
-               Buy
+               class="text-center w-full px-3 py-2 bg-slate-900 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm font-semibold mt-2">
+               Get this book
             </a>
         </div>
         {% endfor %}
     </div>
 
-    <div class="text-center pt-8">
-        <button onclick="window.location.reload()" class="text-indigo-600 font-semibold hover:underline">
+    <div class="text-center pt-6 pb-10">
+        <button onclick="window.location.reload()" class="px-6 py-2 border-2 border-slate-300 text-slate-600 rounded-full font-semibold hover:bg-slate-50 transition-colors">
             Scan Another Shelf
         </button>
     </div>
