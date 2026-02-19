@@ -5,7 +5,7 @@ from fastapi import UploadFile
 
 s3_client = boto3.client(
     's3',
-    region_name="eu-north-1",
+    region_name=settings.AWS_REGION,
     aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
     aws_secret_access_key=settings.AWS_SECRET_ACCESS_KEY
 )
@@ -16,7 +16,7 @@ async def upload_image_to_s3(file: UploadFile, filename: str) -> str:
             file.file,
             settings.AWS_BUCKET_NAME,
             filename,
-            ExtraArgs={'ACL':'public-red', 'ContentType': file.content_type}
+            ExtraArgs={'ACL':'public-read', 'ContentType': file.content_type}
         )
         return f"https://{settings.AWS_BUCKET_NAME}.s3.amazonaws.com/{filename}"
     except NoCredentialsError:
