@@ -8,8 +8,8 @@ https://shelf-scanner-8.onrender.com
 
 
 ## 🛠 Technology Stack
-Frontend: FastAPI with Jinja2 Templates and HTMX
-Backend: FastAPI, PostgreSQL SQLModel, Redis (rate limiting and response caching)
-AI Services: OpenAI GPT-4o for recommendations and descriptions
-Deployment: Docker on Render
+Frontend: FastAPI with Jinja2 Templates and HTMX  
+Backend: FastAPI, PostgreSQL SQLModel, Redis (rate limiting and response caching)  
+AI Services: OpenAI GPT-4o for recommendations and descriptions  
+Deployment: Docker on Render  
 
