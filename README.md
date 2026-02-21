@@ -13,6 +13,20 @@ Backend: FastAPI, PostgreSQL SQLModel, Redis (rate limiting and response caching
 AI Services: OpenAI GPT-4o for recommendations and descriptions  
 Deployment: Docker on Render  
 
+## API Key Setup
+OpenAI API (Required - for book summaries and recommendations):
+
+1. Visit OpenAI Platform
+2. Create an account and add billing
+3. Generate an API key in the API Keys section
+
+Google Vision API (Optional - limited implementation):
+
+1. Go to Google Cloud Console
+2. Enable the Vision API
+3. Create credentials and get your API key
+
+
 ## 📁 Project Architecture
 
 ```
@@ -42,16 +56,4 @@ shelf-scanner-py/
 └── .env                     # Secrets (Gitignored)
 ```
 
-## API Key Setup
-OpenAI API (Required - for book summaries and recommendations):
-
-1. Visit OpenAI Platform
-2. Create an account and add billing
-3. Generate an API key in the API Keys section
-
-Google Vision API (Optional - limited implementation):
-
-1. Go to Google Cloud Console
-2. Enable the Vision API
-3. Create credentials and get your API key
 
