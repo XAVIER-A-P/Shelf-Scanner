@@ -15,6 +15,7 @@ Deployment: Docker on Render
 
 ## 📁 Project Architecture
 
+```
 shelf-scanner-py/
 ├── app/
 │   ├── __init__.py
@@ -39,3 +40,4 @@ shelf-scanner-py/
 ├── Dockerfile               # Production container definition
 ├── requirements.txt         # Python dependencies
 └── .env                     # Secrets (Gitignored)
+```
