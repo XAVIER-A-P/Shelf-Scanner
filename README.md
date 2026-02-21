@@ -7,14 +7,9 @@ Ever found yourself staring at endless shelves in a library, book sale, or even 
 https://shelf-scanner-8.onrender.com
 
 
-## The Production Stack
-I will use FastAPI because it is asynchronous (fast), automatically generates documentation  and uses Pydantic for data validation, which prevents many runtime errors.
+## 🛠 Technology Stack
+Frontend: FastAPI with Jinja2 Templates and HTMX
+Backend: FastAPI, PostgreSQL SQLModel, Redis (rate limiting and response caching)
+AI Services: OpenAI GPT-4o for recommendations and descriptions
+Deployment: Docker on Render
 
-Component,Choice,Rationale
-Backend Framework,FastAPI,The industry standard for high-performance Python AI microservices.
-Database ORM,SQLModel,A modern wrapper around SQLAlchemy that combines DB definition with Pydantic validation.
-Database,PostgreSQL,"Stays the same (Neon, Supabase, or RDS)."
-File Storage,AWS S3 (via boto3),Standard object storage for Python apps (replaces Vercel Blob).
-Caching/Queue,Redis,Used for rate limiting and response caching.
-AI Clients,"openai, google-cloud-vision",Official Python SDKs.
-Deployment,Docker on Render/Railway,Python apps run best in containers.
