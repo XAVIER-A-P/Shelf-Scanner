@@ -38,4 +38,4 @@ shelf-scanner-py/
 │       └── loading.html     # The spinner
 ├── Dockerfile               # Production container definition
 ├── requirements.txt         # Python dependencies
-└── .env                     # Secrets (Gitignored)
+└── .env                     # Secrets (Gitignored)          # Secrets (Gitignored)
