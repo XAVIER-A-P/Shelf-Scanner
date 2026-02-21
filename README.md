@@ -13,3 +13,4 @@ Backend: FastAPI, PostgreSQL SQLModel, Redis (rate limiting and response caching
 AI Services: OpenAI GPT-4o for recommendations and descriptions  
 Deployment: Docker on Render  
 
+
